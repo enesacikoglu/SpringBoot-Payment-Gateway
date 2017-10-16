@@ -1,4 +1,4 @@
-package com.ingenico.payment.challange.model;
+package com.ingenico.payment.challange.entity.security;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -18,7 +18,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ingenico.payment.challange.model.security.Authority;
-import com.ingenico.payment.challange.model.security.UserRole;
+
 
 @Entity
 public class User implements UserDetails {

@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.ingenico.payment.challange.model.User;
-import com.ingenico.payment.challange.model.security.UserRole;
+import com.ingenico.payment.challange.entity.security.User;
+import com.ingenico.payment.challange.entity.security.UserRole;
 import com.ingenico.payment.challange.repository.RoleRepository;
-import com.ingenico.payment.challange.repository.UserService;
+import com.ingenico.payment.challange.service.UserService;
 
 @Controller
 public class HomeController {

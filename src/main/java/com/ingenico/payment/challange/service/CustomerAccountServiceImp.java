@@ -35,7 +35,7 @@ public class CustomerAccountServiceImp implements CustomerAccountService {
 
 				if (amount > 0) {
 
-					foundedAccount.setAccountBalance(foundedAccount.getAccountBalance().add(new BigDecimal(amount)));
+					foundedAccount.setAccountBalance(foundedAccount.getAccountBalance().add(BigDecimal.valueOf(amount)));
 					CustomerAccount newBalancedAccount = customerAccountRepository.save(foundedAccount);
 
 					logger.info("Money added :" + amount);
@@ -65,7 +65,7 @@ public class CustomerAccountServiceImp implements CustomerAccountService {
 				if (amount > 0) {
 
 					BigDecimal accountBalance = foundedAccount.getAccountBalance();
-					BigDecimal moneyToDraw = new BigDecimal(amount);
+					BigDecimal moneyToDraw = BigDecimal.valueOf(amount);
 
 					if (accountBalance.compareTo(moneyToDraw) >= 0) {
 
@@ -111,7 +111,7 @@ public class CustomerAccountServiceImp implements CustomerAccountService {
 
 						BigDecimal accountToBalance = foundedToAccount.getAccountBalance();
 
-						BigDecimal moneyToDraw = new BigDecimal(transferModel.getAmount());
+						BigDecimal moneyToDraw = BigDecimal.valueOf(transferModel.getAmount());
 
 						if (accountFromBalance.compareTo(moneyToDraw) >= 0) {
 
@@ -123,7 +123,7 @@ public class CustomerAccountServiceImp implements CustomerAccountService {
 
 							// Add Money toNewAccount
 							foundedToAccount.setAccountBalance(accountToBalance.add(moneyToDraw));
-							foundedToAccount = customerAccountRepository.save(foundedToAccount);
+							customerAccountRepository.save(foundedToAccount);
 
 							logger.info("Money received :" + transferModel.getAmount());
 

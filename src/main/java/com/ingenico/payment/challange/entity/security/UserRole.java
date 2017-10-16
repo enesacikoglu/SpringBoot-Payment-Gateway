@@ -1,4 +1,4 @@
-package com.ingenico.payment.challange.model.security;
+package com.ingenico.payment.challange.entity.security;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import com.ingenico.payment.challange.model.User;
 
 @Entity
 @Table(name = "user_role")

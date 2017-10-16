@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 @Entity
 @Table(name = "customer_account")
@@ -23,6 +24,9 @@ public class CustomerAccount {
 	@ManyToOne
 	@JoinColumn(name = "customer_id", nullable = false)
 	private Customer customer;
+
+	@Version
+	private Integer version;
 
 	public long getId() {
 		return id;
@@ -55,5 +59,11 @@ public class CustomerAccount {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
+
+	public Integer getVersion() {
+		return version;
+	}
+	
+	
 
 }

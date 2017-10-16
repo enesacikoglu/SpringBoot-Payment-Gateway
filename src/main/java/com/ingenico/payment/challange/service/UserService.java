@@ -1,10 +1,10 @@
-package com.ingenico.payment.challange.repository;
+package com.ingenico.payment.challange.service;
 
 import java.util.List;
 import java.util.Set;
 
-import com.ingenico.payment.challange.model.User;
-import com.ingenico.payment.challange.model.security.UserRole;
+import com.ingenico.payment.challange.entity.security.User;
+import com.ingenico.payment.challange.entity.security.UserRole;
 
 public interface UserService {
 

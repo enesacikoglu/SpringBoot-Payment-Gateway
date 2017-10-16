@@ -10,11 +10,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ingenico.payment.challange.model.User;
-import com.ingenico.payment.challange.model.security.UserRole;
+import com.ingenico.payment.challange.entity.security.User;
+import com.ingenico.payment.challange.entity.security.UserRole;
 import com.ingenico.payment.challange.repository.RoleRepository;
 import com.ingenico.payment.challange.repository.UserRepository;
-import com.ingenico.payment.challange.repository.UserService;
 
 @Service
 @Transactional

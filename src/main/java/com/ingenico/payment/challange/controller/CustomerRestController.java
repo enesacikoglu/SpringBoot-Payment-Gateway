@@ -48,7 +48,7 @@ public class CustomerRestController {
 	@RequestMapping(value = "{customerId}", method = RequestMethod.GET)
 	public ResponseEntity<Customer> findCustomerByCustomerId(@PathVariable String customerId) {
 
-		this.logger.info("CustomerRestController - findAllCustomers() method is called.");
+		this.logger.info("CustomerRestController - findCustomerByCustomerId() method is called.");
 
 		return new ResponseEntity<Customer>(this.customerService.findCustomerById(customerId), HttpStatus.OK);
 

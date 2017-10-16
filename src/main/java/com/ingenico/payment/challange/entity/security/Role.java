@@ -1,6 +1,7 @@
-package com.ingenico.payment.challange.model.security;
+package com.ingenico.payment.challange.entity.security;
 
 import javax.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 

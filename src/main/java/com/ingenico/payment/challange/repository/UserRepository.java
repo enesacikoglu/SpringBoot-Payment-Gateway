@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.ingenico.payment.challange.model.User;
+import com.ingenico.payment.challange.entity.security.User;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 

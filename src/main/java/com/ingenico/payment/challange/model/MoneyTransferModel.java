@@ -4,7 +4,7 @@ public class MoneyTransferModel {
 
 	private String accountFrom;
 
-	private double amount = 0.0;
+	private double amount ;
 
 	private String accountTo;
 

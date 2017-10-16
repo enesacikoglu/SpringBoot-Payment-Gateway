@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.ingenico.payment.challange.model.User;
+import com.ingenico.payment.challange.entity.security.User;
 import com.ingenico.payment.challange.repository.UserRepository;
 
 @Service
