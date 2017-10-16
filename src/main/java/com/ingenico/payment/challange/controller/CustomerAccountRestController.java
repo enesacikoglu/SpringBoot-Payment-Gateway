@@ -31,7 +31,7 @@ public class CustomerAccountRestController {
 	@ApiResponses(value = { @ApiResponse(code = 404, message = "Please check url"),
 			@ApiResponse(code = 200, message = "MoneyTransferModel"),
 			@ApiResponse(code = 500, message = "Error occurred while transfer money one account to another.") })
-	@RequestMapping(value = "/sendMoney", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/sendMoney", method = RequestMethod.POST, produces = "application/json")
 	public ResponseEntity<CustomerAccount> transferMoney(@RequestParam("fromAccount") String fromAccount,
 			@RequestParam("toAccount") String toAccount, @RequestParam("amount") double amount) throws Exception {
 
@@ -47,7 +47,7 @@ public class CustomerAccountRestController {
 	@ApiResponses(value = { @ApiResponse(code = 404, message = "Please check url"),
 			@ApiResponse(code = 200, message = "CustomerAccount"),
 			@ApiResponse(code = 500, message = "Error occurred while saving money to given account.") })
-	@RequestMapping(value = "/addMoney", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/addMoney", method = RequestMethod.POST, produces = "application/json")
 	public ResponseEntity<CustomerAccount> addMoney(@RequestParam("accountId") String accountId,
 			@RequestParam("amount") double amount) throws Exception {
 
@@ -62,7 +62,7 @@ public class CustomerAccountRestController {
 	@ApiResponses(value = { @ApiResponse(code = 404, message = "Please check url"),
 			@ApiResponse(code = 200, message = "CustomerAccount"),
 			@ApiResponse(code = 500, message = "Error occurred while withdraw money to given account.") })
-	@RequestMapping(value = "/withdraw", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/withdraw", method = RequestMethod.POST, produces = "application/json")
 	public ResponseEntity<CustomerAccount> withdraw(@RequestParam("accountId") String accountId,
 			@RequestParam("amount") double amount) throws Exception {
 

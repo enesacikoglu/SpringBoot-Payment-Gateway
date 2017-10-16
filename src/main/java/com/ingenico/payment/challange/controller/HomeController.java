@@ -24,9 +24,14 @@ public class HomeController {
 	@Autowired
 	private RoleRepository roleRepository;
 
-	@RequestMapping("/index")
+	@RequestMapping(path = {"/","/index"}, method = RequestMethod.GET)
 	public String index() {
 		return "index";
+	}
+	
+	@RequestMapping(path = "/home", method = RequestMethod.GET)
+	public String home() {
+		return "home";
 	}
 
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)

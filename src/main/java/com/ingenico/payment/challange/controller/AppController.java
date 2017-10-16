@@ -14,7 +14,7 @@ public class AppController {
 	@Autowired
 	ApplicationInfo app;
 
-	@RequestMapping(path = { "/", "/app" }, method = RequestMethod.GET)
+	@RequestMapping(path = "/app", method = RequestMethod.GET)
 	@ResponseBody
 	public ApplicationInfo appInfo() {
 		return app;

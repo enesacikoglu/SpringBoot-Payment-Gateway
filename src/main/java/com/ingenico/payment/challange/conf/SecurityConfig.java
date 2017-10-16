@@ -43,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		// antMatchers("/**").
 				antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();
 
-		http.csrf().disable().cors().disable().formLogin().failureUrl("/index?error").defaultSuccessUrl("/userFront")
+		http.csrf().disable().cors().disable().formLogin().failureUrl("/index?error").defaultSuccessUrl("/home")
 				.loginPage("/index").permitAll().and().logout()
 				.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/index?logout")
 				.deleteCookies("remember-me").permitAll().and().rememberMe();

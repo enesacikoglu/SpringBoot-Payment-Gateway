@@ -1,2 +1,2 @@
-insert into customer_account(id,account_id, account_balance, customer_id) values(1, '123456789',0,1);
-insert into customer_account(id,account_id, account_balance, customer_id) values(2, '987654321',0,2);
+insert into customer_account(id,account_id, account_balance, customer_id,version) values(1, '123456789',0,1,0);
+insert into customer_account(id,account_id, account_balance, customer_id,version) values(2, '987654321',0,2,0);

@@ -2,6 +2,7 @@ package com.ingenico.payment.challange.entity;
 
 import java.math.BigDecimal;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +27,7 @@ public class CustomerAccount {
 	private Customer customer;
 
 	@Version
-	private Integer version;
+	private long version;
 
 	public long getId() {
 		return id;
@@ -60,7 +61,7 @@ public class CustomerAccount {
 		this.customer = customer;
 	}
 
-	public Integer getVersion() {
+	public long getVersion() {
 		return version;
 	}
 	
